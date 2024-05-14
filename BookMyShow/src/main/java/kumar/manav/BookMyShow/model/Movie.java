@@ -1,6 +1,6 @@
 package kumar.manav.BookMyShow.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import kumar.manav.BookMyShow.model.constants.Genre;
 import kumar.manav.BookMyShow.model.constants.MovieFeatures;
 import lombok.Getter;
@@ -14,8 +14,11 @@ import java.util.List;
 public class Movie extends BaseModel{
 
     private String name;
+    @ManyToMany
     private List<Director> directors;
-    private List<Actor> actors;
+    @Enumerated(EnumType.STRING)
     private Genre genre;
+    @Enumerated(EnumType.STRING)
+    @ElementCollection
     private List<MovieFeatures> movieFeatures;
 }
