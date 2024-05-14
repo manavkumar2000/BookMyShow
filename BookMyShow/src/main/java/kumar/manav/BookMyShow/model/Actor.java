@@ -12,7 +12,6 @@ import java.util.List;
 @Getter
 @Setter
 public class Actor extends BaseModel{
-    @Column(name = "ACTOR_NAME")
     private String name;
     @ManyToMany
     private List<Movie> movies;
