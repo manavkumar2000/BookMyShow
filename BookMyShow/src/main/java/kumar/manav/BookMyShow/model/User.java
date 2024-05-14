@@ -2,6 +2,7 @@ package kumar.manav.BookMyShow.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,6 +15,6 @@ public class User extends BaseModel{
     private String email;
     private String password;
     private String name;
-    @ManyToOne
+    @OneToMany
     private List<Ticket> tickets;
 }
