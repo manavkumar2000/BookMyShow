@@ -1,13 +1,11 @@
 package kumar.manav.BookMyShow.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,5 +17,7 @@ public class Show extends BaseModel{
     private Movie movie;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
+    @OneToMany
+    private List<ShowSeats> showSeats;
 
 }
