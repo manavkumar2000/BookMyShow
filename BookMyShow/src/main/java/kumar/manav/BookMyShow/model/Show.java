@@ -10,6 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Table(name = "BMS_SHOW")
 public class Show extends BaseModel{
     @ManyToOne
     private Auditorium auditorium;

@@ -13,5 +13,5 @@ import java.util.List;
 public class Director extends BaseModel{
     private String name;
     @ManyToMany
-    private List<Movie> directors;
+    private List<Movie> movies;
 }
