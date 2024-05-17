@@ -22,5 +22,5 @@ public abstract class BaseModel {
     @Column(name = "UPDATED_BY")
     private String updatedBy;
     @Column(name = "UPDATED_AT")
-    private String updatedAt;
+    private LocalDateTime updatedAt;
 }

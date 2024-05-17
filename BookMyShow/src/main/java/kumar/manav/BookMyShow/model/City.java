@@ -14,4 +14,5 @@ public class City extends BaseModel{
     private String name;
     @OneToMany
     private List<Theater> theaters;
+
 }
